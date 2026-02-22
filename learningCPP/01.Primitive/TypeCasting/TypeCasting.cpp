@@ -115,15 +115,4 @@ int main()
 
     result_3=(char)SampleData_12;
     cout << "After character datacast 70.99999 : " << result_3 <<endl;//F
-
-
-
-
-
-
-
-
-
-
-
 }
