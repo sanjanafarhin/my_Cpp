@@ -1,88 +1,124 @@
 #include <iostream>
-#include<string>
+#include <string>
 
-/*for(initialization; condition; update)
+/*
+Definition:
+A for loop is used when you know how many times you want to repeat something.
+
+NOTE 1.
+
+3 Parts:
+
+Initialization → starting point
+
+Condition → check before every loop
+
+Update → increase/decrease value
+
+
+NOTE 2.
+
+FORMAT OF WRITING
+
+for(initialization; condition; update)
 {
     // body of loop
-}*/
+}
+
+
+NOTE 3.
+
+Initialization → runs only one time.
+
+Condition → checked before every iteration.
+
+Body executes if condition is true.
+
+Update → runs after each iteration.
+
+Repeat until condition becomes false.
+    */
 
 using namespace std;
 
-struct MainCourse{
+struct MainCourse
+{
     string Foodname;
     int price;
 };
 
 int main()
-{  
-    MainCourse avaiablefood[5]={{"Alfredo Pasta",495},{"Dumpling",575},{"Chicken Pasta",450},{"Avacado toast",375},{"chicken sandwitch",675}};
+{
+    MainCourse avaiablefood[5] = {{"Alfredo Pasta", 495}, {"Dumpling", 575}, {"Chicken Pasta", 450}, {"Avacado toast", 375}, {"chicken sandwitch", 675}};
     string command;
     int maincourses;
     string order_food;
     MainCourse Orderedfood[10];
 
-    cout << "Wanna Order Something?" <<endl;
+    cout << "Wanna Order Something?" << endl;
     cin >> command;
 
-    if(command == "YES"){
-        cout << "welcome to shop villey" <<endl;
+    if (command == "YES")
+    {
+        cout << "welcome to shop villey" << endl;
     }
-    else{
+    else
+    {
         return 0;
     }
 
-    cout << "how many main course you wanna have?" <<endl;
+    cout << "how many main course you wanna have?" << endl;
     cin >> maincourses;
     Orderedfood[maincourses];
     cin.ignore();
 
-    for(int i=0;i<maincourses;i++)
+    for (int i = 0; i < maincourses; i++)
     {
 
-        cout << "enter the food name: " <<endl;
-        getline(cin,order_food);
+        cout << "enter the food name: " << endl;
+        getline(cin, order_food);
 
-        if(order_food==avaiablefood[0].Foodname){
-            Orderedfood[i].Foodname=avaiablefood[0].Foodname;
-            Orderedfood[i].price=avaiablefood[0].price;
+        if (order_food == avaiablefood[0].Foodname)
+        {
+            Orderedfood[i].Foodname = avaiablefood[0].Foodname;
+            Orderedfood[i].price = avaiablefood[0].price;
         }
 
-        else  if(order_food==avaiablefood[1].Foodname){
-            Orderedfood[i].Foodname=avaiablefood[1].Foodname;
-            Orderedfood[i].price=avaiablefood[1].price;
+        else if (order_food == avaiablefood[1].Foodname)
+        {
+            Orderedfood[i].Foodname = avaiablefood[1].Foodname;
+            Orderedfood[i].price = avaiablefood[1].price;
         }
-         else if(order_food==avaiablefood[2].Foodname){
-            Orderedfood[i].Foodname=avaiablefood[2].Foodname;
-            Orderedfood[i].price=avaiablefood[2].price;
+        else if (order_food == avaiablefood[2].Foodname)
+        {
+            Orderedfood[i].Foodname = avaiablefood[2].Foodname;
+            Orderedfood[i].price = avaiablefood[2].price;
         }
 
-        else if(order_food==avaiablefood[3].Foodname){
+        else if (order_food == avaiablefood[3].Foodname)
+        {
             Orderedfood[i].Foodname = avaiablefood[3].Foodname;
-            Orderedfood[i].price=avaiablefood[3].price;
+            Orderedfood[i].price = avaiablefood[3].price;
         }
-        else if(order_food==avaiablefood[4].Foodname){
-            Orderedfood[i].Foodname=avaiablefood[4].Foodname;
-            Orderedfood[i].price=avaiablefood[4].price;
+        else if (order_food == avaiablefood[4].Foodname)
+        {
+            Orderedfood[i].Foodname = avaiablefood[4].Foodname;
+            Orderedfood[i].price = avaiablefood[4].price;
         }
-        else{
-            Orderedfood[i].Foodname="Nothing";
+        else
+        {
+            Orderedfood[i].Foodname = "Nothing";
         }
-
     }
 
-    int totalcost=0;
+    int totalcost = 0;
 
-    cout <<"You ordered," <<endl;
-    for(int i=0;i<maincourses;i++){
-        cout << Orderedfood[i].Foodname << ";   costed:" << Orderedfood[i].price <<endl;
-        totalcost=totalcost +Orderedfood[i].price;
+    cout << "You ordered," << endl;
+    for (int i = 0; i < maincourses; i++)
+    {
+        cout << Orderedfood[i].Foodname << ";   costed:" << Orderedfood[i].price << endl;
+        totalcost = totalcost + Orderedfood[i].price;
     }
 
-    cout << "Your total cost will be" << totalcost << "tk" <<endl;
-
-     
-     
-    
-
-
+    cout << "Your total cost will be" << totalcost << "tk" << endl;
 }

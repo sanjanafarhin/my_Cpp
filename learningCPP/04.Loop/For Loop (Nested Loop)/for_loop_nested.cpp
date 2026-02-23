@@ -1,10 +1,20 @@
 #include <iostream>
 #include <string>
 
-/*for(initialization; condition; update)
+/*
+FORMAT OF WRITING
+
+for(initialization; condition; update)-->Outer loop
+{
+
+    for(initialization; condition; update)-->inner loop
 {
     // body of loop
-}*/
+}
+
+}
+
+*/
 
 using namespace std;
 
