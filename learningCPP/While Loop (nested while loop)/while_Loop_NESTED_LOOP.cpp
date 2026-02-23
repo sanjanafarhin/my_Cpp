@@ -36,33 +36,33 @@ int main()
     cin >> num;
     Student[num];
 
-    int i=0; //initialization
+    int i=0; //initialization (outer loop)
     int sum;
-    while(i<num)//condition
+    while(i<num)//condition (outer loop)
 
     {   
         cin.ignore();
         cout <<"Enter the student's name: " << endl;
         getline(cin,Student[i].name);
         
-        int s=0;
+        int s=0; //inner loop initialization
         sum=0;
         
-        while(s<4){
+        while(s<4){ //inner loop condition
         cout <<"Enter the student's Subject name "<< s+1 <<"th"<< endl;
         cin.ignore();
         getline(cin, Student[i].grades[s].subject);
 
-        cout <<"Enter the student's marks: " << endl;
+        cout <<"Enter the student's marks: " << endl;     
         cin >> Student[i].grades[s].marks;
 
         sum = sum +  Student[i].grades[s].marks;
         Student[i].average=sum/4;
 
-        s++;
+        s++; //inner loop increment or decrement
 
         }
-         i++; //increment
+         i++; // outer loop increment or decrement
     }
 
    int j=0;
