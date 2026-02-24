@@ -2,6 +2,7 @@
 #include <cstdlib>
 
 using namespace std;
+//it is independent as the user has the access to increase and decrese indexes
 
 int main()
 {
@@ -116,9 +117,9 @@ int main()
 
             */
         }
-        else
-        {
-            cout << "invaild choice" << endl;
+        else{
+            cout << "invalid" <<endl;
+        }
+       
         }
     }
-}

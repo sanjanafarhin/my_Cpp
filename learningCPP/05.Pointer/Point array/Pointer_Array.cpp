@@ -44,5 +44,12 @@ int main(){
    for(int i=0;i<N;i++){
     cout << *(Array_Ptr + i) << "," ;
    }
+   cout << "\n";
 
+   //how to directly have an access to array index
+  int i;
+   cout << "which index you wanna have access in ?" <<endl;
+   cin >> i;
+  int access=*(Array_Ptr + (i-1));
+  cout << "index num " <<i<<" :"<<access <<endl;
 }
