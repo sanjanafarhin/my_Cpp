@@ -50,7 +50,8 @@ void swap(int *var_1, int *var_2)
 
 /*
 Note 3.
-when function itself a pointer , we have assign a pointer variable to take this pointer fuction 
+when function itself a pointer , we have assign a pointer variable to take this pointer 
+fuction & we have to return address not value
 */
 
 int *func(int *var_3)
