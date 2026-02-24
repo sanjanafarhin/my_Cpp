@@ -2,6 +2,7 @@
 #include <cmath>
 
 using namespace std;
+
 /*
 NOTE 1.
 void func (datatype* var) <---Address as parametre
@@ -12,6 +13,7 @@ datatype* var_2 = var; <--- Addressing variable = Address
 }
 
 */
+
 
 /*
 NOTE 2.
