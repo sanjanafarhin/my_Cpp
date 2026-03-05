@@ -75,14 +75,4 @@ int main()
    print_vector(vec_3);
    
 
-   /*
-   NOTE 10.
-
-   clear() helps to clear the total vector and size turns into 0
-
-   here size will 0
-   as well as capacity will be 0
-
-
-   */
 }
