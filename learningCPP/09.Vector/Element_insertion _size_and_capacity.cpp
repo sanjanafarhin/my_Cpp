@@ -81,6 +81,12 @@ int main()
 
    vectorname.insert(vectorname.begin()+index number, variable);
 
+   > helps to insert new element in any index
+
+   > size will change as elements are incresing 
+
+   > capacity remains unchanged
+
    */
 
     cout << "\n\n";
@@ -95,9 +101,39 @@ int main()
     cout << "capacity of the element after push back:" << vec_1.capacity() << endl; //capacity =10
 
     /*
-    
+
     NOTE 4.
-    vectorname.reserve(n) helps to pre allocate memory for n element
+    vectorname.reserve(n)
+
+      > It pre-allocates memory for n elements in the vector.
+
+      > This means the capacity becomes at least n.
+
+      > The size does NOT change as element is not incresing but memory is so only the capacity changes
 
     */
+   vec_1.reserve(20);
+
+   cout << "size of the elemnt after push back :" << vec_1.size() << endl;  //size = 9
+   cout << "capacity of the element after push back:" << vec_1.capacity() << endl; //capacity =20
+
+   /*
+   NOTE 5.
+    vectorname.resize(n).
+
+      > the size of vector changes.
+
+      > only size would change , the capacity will remain the same
+
+      > only it changes when size > capacity, then capacity will as same as size
+
+
+    ****important rule size can not be greater then the capacity
+    */
+
+   vec_1.resize(28);
+   cout << "size of the elemnt after push back :" << vec_1.size() << endl;  //size = 9
+   cout << "capacity of the element after push back:" << vec_1.capacity() << endl; //capacity =20
+
+
 }
