@@ -9,22 +9,22 @@ datatype Function_name(datatype parameters)
 {
  //function body
 
- return var; --> function will return based on the 
+ return var; --> function will return based on the
                  type of function
 }
 */
 
-int averge_of_marks(int marks[],int size)
-{  int avg,sum;
-    sum=0;
-    for(int i=0;i<size;i++)
+int averge_of_marks(int marks[], int size)
+{
+    int avg, sum;
+    sum = 0;
+    for (int i = 0; i < size; i++)
     {
-     sum=sum+marks[i];
+        sum = sum + marks[i];
     }
-    avg=sum/3;
+    avg = sum / 3;
     return avg;
 }
-
 
 /*
 NOTE 2.
@@ -40,9 +40,8 @@ void Function_name(datatype parameters)
 
 void display(int average)
 {
-    cout << "the avg marks : "<< average <<endl;
+    cout << "the avg marks : " << average << endl;
 }
-
 
 /*
 NOTE 3.
@@ -56,23 +55,23 @@ return datatype;
 }
 */
 
-
-float credits(int low_avg_limit=90)
+float credits(int low_avg_limit = 90)
 {
-    if(low_avg_limit<=90)
+    if (low_avg_limit <= 90)
     {
         return 4.00;
     }
-    else{
+    else
+    {
         return 3.67;
     }
-} 
+}
 
 int main()
 {
-    int marks[5]={89,90,99,87,78};
-    int average=averge_of_marks(marks,5);
+    int marks[5] = {89, 90, 99, 87, 78};
+    int average = averge_of_marks(marks, 5);
     display(average);
-    float credit=credits();
-    cout << "credits: "<< credit <<endl;
+    float credit = credits();
+    cout << "credits: " << credit << endl;
 }
