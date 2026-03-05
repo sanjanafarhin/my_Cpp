@@ -35,8 +35,8 @@ int main()
     int s;
     vector<int> vec_1 = {10, 20, 30, 40, 50};
 
-    cout << "size of the element before push back :" << vec_1.size() << endl; //size= 5
-    cout << "capacity of the element before push back:" << vec_1.capacity() << endl; //capacity =5
+    cout << "size of the element before push back :" << vec_1.size() << endl;        // size= 5
+    cout << "capacity of the element before push back:" << vec_1.capacity() << endl; // capacity =5
     cout << "\n\n";
 
     vec_1.push_back(90);
@@ -45,20 +45,19 @@ int main()
     cout << "vector 1 after push_back 90 and 70 in vector : \n";
     print_vector(vec_1);
     cout << "\n\n";
-    
 
     /*
     NOTE 2.
 
-    whenever we want to push back or insert element the capacity of vector doubles with the inital size 
+    whenever we want to push back or insert element the capacity of vector doubles with the inital size
     here inital size of vec_1 is 5
     after push_back 2 elements the capacity turned into 5*2 = 10;
     and capacity remians unchanged after that
-    
+
     */
 
-    cout << "size of the elemnt after push back :" << vec_1.size() << endl; //size = 7
-    cout << "capacity of the element after push back:" << vec_1.capacity() << endl; //capacity = 10
+    cout << "size of the elemnt after push back :" << vec_1.size() << endl;         // size = 7
+    cout << "capacity of the element after push back:" << vec_1.capacity() << endl; // capacity = 10
 
     /*
     NOTE 3.
@@ -73,17 +72,31 @@ int main()
 
    */
     cout << "\n\n";
-   cout << "first element :" << *(vec_1.begin()) << endl;
-   cout << "Last element :" << *(vec_1.end() - 1) << endl;
+    cout << "first element :" << *(vec_1.begin()) << endl;
+    cout << "Last element :" << *(vec_1.end() - 1) << endl;
+    /*
+    NOTE 3.
+
+    vectorname.emplace()
+
+    > it helps to insert element in the specific position
+
+    > it inserts directly in vector without copying the value like the insert() function
+
+
+    */
+    cout << "\n\n";
+    vec_1.emplace(vec_1.begin() + 3, 66);
+    print_vector(vec_1);
 
     /*
-   NOTE 3.
+   NOTE 4.
 
    vectorname.insert(vectorname.begin()+index number, variable);
 
    > helps to insert new element in any index
 
-   > size will change as elements are incresing 
+   > size will change as elements are incresing
 
    > capacity remains unchanged
 
@@ -97,12 +110,13 @@ int main()
     print_vector(vec_1);
     cout << "\n\n";
 
-    cout << "size of the elemnt after push back :" << vec_1.size() << endl;  //size = 9
-    cout << "capacity of the element after push back:" << vec_1.capacity() << endl; //capacity =10
+    cout << "size of the elemnt after inserting :" << vec_1.size() << endl;         // size = 9
+    cout << "capacity of the element after inserting:" << vec_1.capacity() << endl; // capacity =10
+    cout << "\n\n";
 
     /*
 
-    NOTE 4.
+    NOTE 5.
     vectorname.reserve(n)
 
       > It pre-allocates memory for n elements in the vector.
@@ -112,28 +126,28 @@ int main()
       > The size does NOT change as element is not incresing but memory is so only the capacity changes
 
     */
-   vec_1.reserve(20);
+    vec_1.reserve(20);
 
-   cout << "size of the elemnt after push back :" << vec_1.size() << endl;  //size = 9
-   cout << "capacity of the element after push back:" << vec_1.capacity() << endl; //capacity =20
+    cout << "size of the elemnt after reserving:" << vec_1.size() << endl;         // size = 9
+    cout << "capacity of the element after reserving:" << vec_1.capacity() << endl; // capacity =20
 
-   /*
-   NOTE 5.
-    vectorname.resize(n).
+    /*
+    NOTE 6.
+     vectorname.resize(n).
 
-      > the size of vector changes.
+       > the size of vector changes.
 
-      > only size would change , the capacity will remain the same
+       > only size would change , the capacity will remain the same
 
-      > only it changes when size > capacity, then capacity will as same as size
-
-
-    ****important rule size can not be greater then the capacity
-    */
-
-   vec_1.resize(28);
-   cout << "size of the elemnt after push back :" << vec_1.size() << endl;  //size = 9
-   cout << "capacity of the element after push back:" << vec_1.capacity() << endl; //capacity =20
+       > only it changes when size > capacity, then capacity will as same as size
 
 
+     ****important rule size can not be greater then the capacity
+     */
+
+    cout << "\n\n";
+
+    vec_1.resize(28);
+    cout << "size of the elemnt after resizing :" << vec_1.size() << endl;         // size = 9
+    cout << "capacity of the element after resizing:" << vec_1.capacity() << endl; // capacity =20
 }

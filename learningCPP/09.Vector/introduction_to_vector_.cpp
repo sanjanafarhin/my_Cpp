@@ -73,49 +73,8 @@ int main()
    vector<int> vec_3(vec_1);
    cout << "vector 3 : \n";
    print_vector(vec_3);
-
-  
    
 
-   vec_1.pop_back();
-   vec_1.pop_back();
-   vec_1.pop_back();
-   cout << "vector 1 after pop_back in vector : \n";
-   print_vector(vec_1);
-   
-
-
-
-  
-
-   /*
-
-   NOTE 9.
-
-   erase() function helps to erase or remove some
-   elements is the vector
-
-   erase(start,end);
-   ex: erase(vector name.begin()+1,vector.begin+6) --> elemnt from 1-5 index will removed
-   
-   all tho in removes the element the capacity of eleement will remain the same
-
-   */
-
-   vec_4.erase(vec_4.begin() + 1, vec_4.begin() + 2); // remove index 1 only
-
-   cout << "\n\n";
-
-   cout << "vector 4 after erase 1th index elements :" << endl;
-
-   print_vector(vec_4);
-
-   cout << "\n\n";
-
-   vec_4.erase(vec_4.begin() + 2, vec_4.begin() + 6); // remove index 1 to 5
-   cout << "vector 4 after erase 2 to 5th index elements :" << endl;
-
-   print_vector(vec_4);
    /*
    NOTE 10.
 
