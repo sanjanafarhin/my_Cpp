@@ -28,11 +28,5 @@ int main()
     vec_1.swap(vec_2);
     cout << vec_2[0] << vec_2[1] << endl;
 
-    /*
-    bool empty = vectorname.empty()
-    if empty vector --> 1;
-    if no empty vector --> 0;
-    */
-   bool empty = vec_2.empty();
-   cout << "if empty  or not :"<< empty;
+
 }

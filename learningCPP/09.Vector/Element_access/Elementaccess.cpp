@@ -17,7 +17,7 @@ int main()
 
     cout << "take input:";
     takeinput(vec_1);
-
+    
     /*
     NOTE 1.
 
@@ -78,6 +78,7 @@ int main()
     {
         cout << vec_3.at(i) << " ";
     }
+    
     cout << "\n\n";
 
     /*
