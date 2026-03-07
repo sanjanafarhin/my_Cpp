@@ -62,9 +62,9 @@ int main()
     /*
     NOTE 3.
 
-   Iterators: vectorname.begin() --> first index
-              vectorname.end()  --> last index +1
-              (vectorname.end -1) --> last index
+   Iterators: vectorname.begin() --> first index address
+              vectorname.end()  --> last index +1 address
+              (vectorname.end -1) --> last index address
 
    direct access to Iteration :
    *(vectorname.begin())-->first element

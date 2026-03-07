@@ -33,9 +33,10 @@ int main()
 
       vector <datatype> vector name; --> initial empty vector
 
-      vector <datatype> vector name={value of elements};
+      vector <datatype> vector name={value of elements}; --> initialize element directly in vector
+      Ex: 
 
-      vector <datatype> vector name (vector size, value of element);
+      vector <datatype> vector name (vector size, value of element); --> pre -initialize given element in the vector
 
       vector <datatype> vector name=(other vector name to have the same size other vector);
 
@@ -52,12 +53,12 @@ int main()
 
 
    */
-  
-   // 1
+  //vector <datatype> vector name; --> initial empty vector
+   
 
    vector<int> vec_1 = {10, 20, 30, 40, 50};
    cout << "vector 1 : \n";
-   print_vector(vec_1);
+   print_vector(vec_1); 
    cout << "\n\n";
 
    // 2
